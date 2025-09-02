@@ -16,5 +16,8 @@
     "svelte-i18n": "^4.0.1",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.4"
   }
 }
