@@ -1,1 +1,19 @@
+@import "@fontsource/noto-sans-mono";
 @import "tailwindcss";
+
+@theme {
+    --font-display: "Noto Sans Mono", monospace;
+
+    --color-dark-gray: oklch(0.3211 0 0);
+    --color-very-dark-gray: oklch(0.2178 0 0);
+    --color-floral-white: oklch(0.9854 0.0179 89.35);
+
+    --background-color: var(--color-floral-white);
+    --text-color: var( --color-very-dark-gray);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-display);
+}
