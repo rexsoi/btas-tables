@@ -7,7 +7,16 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="grid gap-8 grid-cols-[320px_1fr]">
+		<aside class="p-8 space-y-16">
+			<a class="block" href="/">Logo</a>
+			<nav>
+				<ul>
+					<li><a class="block text-xl py-1 px-2" href="/">Home</a></li>
+					<li><a class="block text-xl py-1 px-2" href="/">Movement Cost Table</a></li>
+				</ul>
+			</nav>
+		</aside>
 		<slot />
 	</body>
 </html>
