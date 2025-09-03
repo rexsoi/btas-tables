@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <section
+    class="max-w-[min(112rem,100%-2rem] mx-auto p-8 border-4 border-solid"
+  >
+    <h1 class="text-center uppercase font-bold text-3xl leading-none mb-8">
+      Movement Cost Table (p. 34)
+    </h1>
+    <table class="table-fixed w-full table table-bgc-1">
+      <thead class="sticky top-0 z-10">
+        <tr>
+          <th>Terrain Type</th>
+          <th>Move Cost per Inch</th>
+          <th>Prohibited Movement Type/Unit Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Base Move</td>
+          <td align="center">1<sup>"</sup></td>
+          <td align="center">&mdash;</td>
+        </tr>
+        <tr>
+          <td>Clear</td>
+          <td align="center"
+            >+0"<sup><a class="underline" href="#mct-1">1</a></sup></td
+          >
+          <td align="center">n, s movement types</td>
+        </tr>
+        <tr>
+          <td>Paved/Road/Bridge</td>
+          <td align="center"
+            >+0"<sup><a class="underline" href="#mct-2">2</a></sup></td
+          >
+          <td align="center">n, s movement types</td>
+        </tr>
+        <tr>
+          <td>Rough</td>
+          <td align="center"
+            >+0"<sup><a class="underline" href="#mct-2">3</a></sup></td
+          >
+          <td align="center">n, s movement types</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mt-8 space-y-2">
+      <p>
+        <strong>Note:</strong> Airborne units (including air vechicles and aerospace
+        units) ignore all terrain condition until they attempt to occupy the same
+        space and level of them (includint attempts to land or liftoff). If airborne
+        units attempt to enter terrain prhibited to them, treat the result as a crash.
+      </p>
+      <p id="mct-1">
+        <sup>1</sup>+1<sup>"</sup> Move cost for wheeled support vehicles without
+        Off-Road (ORO) special ability.
+      </p>
+      <p id="mct-2">
+        <sup>2</sup>All Tracked or Wheeled units gain an extra 2" of Move on any
+        turn where the units spends its entire Move on this terrain.
+      </p>
+    </div>
+    <table class="w-full table-auto mt-8 table table-bgc-1">
+      <thead>
+        <tr><th colspan="2">Unit Type Key</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ground Units</td>
+          <td>Includes all units that use MV</td>
+        </tr>
+        <tr>
+          <td>&nbsp;Vehicles</td>
+          <td>Includes all motive types covered by Air, Ground, and Naval</td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;Air</td>
+          <td>Combat or support vehicles using VTOL or WiGE movement types</td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;VTOL</td>
+          <td>Combat or support vehicles using VTOL movement type</td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;WiGE</td>
+          <td>Combat or support vehicles using WiGE movement type</td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;Naval</td>
+          <td
+            >Combat or support vehicles using naval or submarine movement types</td
+          >
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;Sub</td>
+          <td>Combat or support vehicles using submarine movement type</td>
+        </tr>
+        <tr>
+          <td>Aerospace</td>
+          <td
+            >Includes conventional fighters, aerospace fighters, small craft,
+            fixed-wing, airship, support vehicles, and DropShips</td
+          >
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</Layout>
