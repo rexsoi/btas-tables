@@ -8,6 +8,16 @@
     --color-very-dark-gray: oklch(0.2178 0 0);
     --color-floral-white: oklch(0.9854 0.0179 89.35);
 
+    --color-table-1 : oklch(0.6095 0.1246 90.96);
+    --color-table-2 : oklch(0.5574 0.2076 25.8);
+    --color-table-3 : oklch(0.443 0.0739 311.92);
+    --color-table-4 : oklch(0.6373 0.1431 132.8);
+    --color-table-5 : oklch(0.503 0.0034 264.53);
+    --color-table-6 : oklch(0.4754 0.0605 122.64);
+    --color-table-7 : oklch(0.4587 0.0311 243.31);
+    --color-table-8 : oklch(0.3629 0.0739 353.25);
+    --color-table-9 : oklch(0.277 0.0057 271.21);
+
     --background-color: var(--color-floral-white);
     --text-color: var( --color-very-dark-gray);
 }
@@ -16,4 +26,49 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-display);
+}
+
+table th,
+table td {
+    padding: 1rem 1.5rem;
+}
+
+.table {
+    thead {
+        background-color: var(--table-color);
+        color: var(--color-floral-white);
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: oklch(from var(--table-color) l c h / .25);
+    }
+}
+
+.table-bgc-1 {
+    --table-color: var(--color-table-1);
+}
+.table-bgc-2 {
+    --table-color: var(--color-table-2);
+}
+.table-bgc-3 {
+    --table-color: var(--color-table-3);
+}
+.table-bgc-4 {
+    --table-color: var(--color-table-4);
+}
+.table-bgc-5 {
+    --table-color: var(--color-table-5);
+}
+.table-bgc-6 {
+    --table-color: var(--color-table-6);
+}
+.table-bgc-7 {
+    --table-color: var(--color-table-7);
+}
+.table-bgc-8 {
+    --table-color: var(--color-table-8);
+}
+
+.table-bgc-9  {
+    --table-color: var(--color-table-9);
 }
